@@ -66,6 +66,9 @@ The **colored point cloud map (left)** and the **x8 Real-Time Performance** (rig
 ### 2. Create ROS workspace
 
 ```bash
+cd PATH_OF_LIVOX_ROS_DRIVER
+source devel/setup.bash
+cd ~
 mkdir -p ~/SR-LIVO/src
 cd SR-LIVO/src
 ```
@@ -88,3 +91,32 @@ B. The warning message "Failed to find match for field 'time'." doesn't matter. 
 C. **Please create a folder named "output" before running.** When **SR-LIVO** is running, the estimated pose is recorded in real time in the **pose.txt** located in the **output folder**.
 
 D. we store the pose ground truth of the *NTU_VIRAL* dataset used by us as [TUM](https://vision.in.tum.de/data/datasets/rgbd-dataset) format. Please down load from [Google drive](https://drive.google.com/drive/folders/1WnvzUzP_s70p4myPf5fsP1Jtr_62PnL1).
+
+###  1. Run on [*R3Live_Dataset*](https://github.com/ziv-lin/r3live_dataset)
+
+Before running, please type the following command to examine the image message type of ROS bag file:
+
+```bash
+rosbag info SEQUENCE_NAME.bag
+```
+
+If the image message type is **sensor_msgs/Image**, please type:
+
+```bash
+cd SR-LIVO
+source devel/setup.bash
+roslaunch sr_livo livo_r3live.launch
+```
+
+If the image message type is **sensor_msgs/CompressedImage**, please type:
+
+```bash
+cd SR-LIVO
+source devel/setup.bash
+roslaunch sr_livo livo_r3live_compressed.launch
+```
+Then open the terminal in the path of the bag file, and type:
+
+```bash
+rosbag play SEQUENCE_NAME.bag --clock -d 1.0
+```
