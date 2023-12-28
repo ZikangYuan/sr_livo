@@ -24,3 +24,15 @@ The **colored point cloud map (left)** and the **x8 Real-Time Performance** (rig
 <img src="doc/map.png" width=40.0% />
 <img src="doc/runx8.gif" width=52.11% />
 </div>
+
+## Pipeline
+
+<div align="left">
+<img src="doc/framework.png" width=40% />
+<img src="doc/method.png" width=45% />
+</div>
+
+**New Features:**
+1. The **Sweep Reconstruction** module aligns the end timestamp of reconstructed sweep to the timestamp of captured image. Thus, the state of all image-captured moments can be solved by the more reliable LIO module instead of the hypersensitive VIO module.
+
+2. In **SR-LIVO**, we utilize an ESIKF to solve state in LIO module, and utilize an ESIKF to optimize camera parameters in vision module respectively.
