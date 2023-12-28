@@ -36,3 +36,43 @@ The **colored point cloud map (left)** and the **x8 Real-Time Performance** (rig
 1. The **Sweep Reconstruction** module aligns the end timestamp of reconstructed sweep to the timestamp of captured image. Thus, the state of all image-captured moments can be solved by the more reliable LIO module instead of the hypersensitive VIO module.
 
 2. In **SR-LIVO**, we utilize an ESIKF to solve state in LIO module, and utilize an ESIKF to optimize camera parameters in vision module respectively.
+
+## Installation
+
+### 1. Requirements
+
+> GCC >= 7.5.0
+>
+> Cmake >= 3.16.0
+> 
+> [Eigen3](http://eigen.tuxfamily.org/index.php?title=Main_Page) >= 3.3.4
+>
+> [OpenCV](https://github.com/opencv/opencv) >= 3.3
+>
+> [PCL](https://pointclouds.org/downloads/) == 1.8 for Ubuntu 18.04, and == 1.10 for Ubuntu 20.04
+>
+> [Ceres](http://ceres-solver.org/installation.html) >= 1.14
+>
+> [ROS](http://wiki.ros.org/ROS/Installation)
+
+##### Have Tested On:
+
+| OS    | GCC  | Cmake | Eigen3 | OpenCV | PCL | Ceres |
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| Ubuntu 20.04 | 9.4.0  | 3.16.3 | 3.3.7 | 4.2.0 | 1.10.0 | 1.14 |
+
+### 2. Create ROS workspace
+
+```bash
+mkdir -p ~/SR-LIVO/src
+cd SR-LIVO/src
+```
+
+### 3. Clone the directory and build
+
+```bash
+git clone https://github.com/ZikangYuan/sr_livo.git
+cd ..
+catkin_make
+```
+
