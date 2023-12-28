@@ -54,6 +54,8 @@ The **colored point cloud map (left)** and the **x8 Real-Time Performance** (rig
 > [Ceres](http://ceres-solver.org/installation.html) >= 1.14
 >
 > [ROS](http://wiki.ros.org/ROS/Installation)
+>
+> [Livox_ROS_Driver](https://github.com/Livox-SDK/livox_ros_driver)
 
 ##### Have Tested On:
 
