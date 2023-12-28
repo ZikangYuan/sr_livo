@@ -8,5 +8,5 @@ The **colored point cloud map (left)** and the **x8 Real-Time Performance** (rig
 
 <div align="left">
 <img src="doc/map.png" width=40.0% />
-<img src="doc/runx8.gif" width=40.0% />
+<img src="doc/runx8.gif" width=52.11% />
 </div>
