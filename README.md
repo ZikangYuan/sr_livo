@@ -121,7 +121,7 @@ Then open the terminal in the path of the bag file, and type:
 rosbag play SEQUENCE_NAME.bag --clock -d 1.0
 ```
 
-###  1. Run on [*NTU_VIRAL*]([http://robots.engin.umich.edu/nclt/](https://ntu-aris.github.io/ntu_viral_dataset/))
+###  2. Run on [*NTU_VIRAL*]([http://robots.engin.umich.edu/nclt/](https://ntu-aris.github.io/ntu_viral_dataset/))
 
 Please go to the workspace of **SR-LIVO** and type:
 
@@ -136,3 +136,20 @@ Then open the terminal in the path of the bag file, and type:
 ```bash
 rosbag play SEQUENCE_NAME.bag --clock -d 1.0
 ```
+
+## Citation
+
+If you use our work in your research project, please consider citing:
+
+```
+@article{yuan2022sr,
+  title={SR-LIO: LiDAR-Inertial Odometry with Sweep Reconstruction},
+  author={Yuan, Zikang and Lang, Fengtian and Yang, Xin},
+  journal={arXiv preprint arXiv:2210.10424},
+  year={2022}
+}
+```
+
+## Acknowledgments
+
+Thanks for [R3Live](https://github.com/hku-mars/r3live), [CT-ICP](https://github.com/jedeschaud/ct_icp), [Fast-LIO](https://github.com/hku-mars/FAST_LIO) and [Open-VINs](https://github.com/vell001/open_vins).
