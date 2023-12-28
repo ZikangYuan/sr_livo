@@ -75,4 +75,14 @@ git clone https://github.com/ZikangYuan/sr_livo.git
 cd ..
 catkin_make
 ```
+## Run on Public Datasets
 
+Noted:
+
+A. If you use the spinning LiDAR, please make sure the LiDAR point clouds have the "ring" channel information.
+
+B. The warning message "Failed to find match for field 'time'." doesn't matter. It can be ignored.
+
+C. **Please create a folder named "output" before running.** When **SR-LIVO** is running, the estimated pose is recorded in real time in the **pose.txt** located in the **output folder**.
+
+D. we store the pose ground truth of the *NTU_VIRAL* dataset used by us as [TUM](https://vision.in.tum.de/data/datasets/rgbd-dataset) format. Please down load from [Google drive](https://drive.google.com/drive/folders/1WnvzUzP_s70p4myPf5fsP1Jtr_62PnL1).
