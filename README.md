@@ -4,9 +4,9 @@
 
 ## Demo Video (2023-12-27 Update)
 
-The **colored point cloud map (left)** and the **x4 Real-Time Performance** (right) on the sequence *hku_campus_seq_00* of self-collected dataset from [**R3Live**](https://github.com/hku-mars/r3live). On our currently hardware platform (**Intel Core i7-11700 and 32 GB RAM**) needs **30~34ms** to handle a sweep with image under this environment.
+The **colored point cloud map (left)** and the **x8 Real-Time Performance** (right) on the sequence *hku_campus_seq_00* of self-collected dataset from [**R3Live**](https://github.com/hku-mars/r3live). On our currently hardware platform (**Intel Core i7-11700 and 32 GB RAM**) needs **30~34ms** to handle a sweep with image under this environment.
 
 <div align="left">
 <img src="doc/map.png" width=40.0% />
-<img src="doc/run.gif" width=80.0% />
+<img src="doc/runx8.gif" width=80.0% />
 </div>
