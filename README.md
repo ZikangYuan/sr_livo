@@ -121,7 +121,7 @@ Then open the terminal in the path of the bag file, and type:
 rosbag play SEQUENCE_NAME.bag --clock -d 1.0
 ```
 
-###  2. Run on [*NTU_VIRAL*]([http://robots.engin.umich.edu/nclt/](https://ntu-aris.github.io/ntu_viral_dataset/))
+###  2. Run on [*NTU_VIRAL*](https://ntu-aris.github.io/ntu_viral_dataset/)
 
 Please go to the workspace of **SR-LIVO** and type:
 
