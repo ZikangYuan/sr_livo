@@ -29,7 +29,7 @@ The **colored point cloud map (left)** and the **x8 Real-Time Performance** (rig
 
 <div align="left">
 <img src="doc/framework.png" width=40% />
-<img src="doc/method.png" width=45% />
+<img src="doc/sweep_reconstruction.png" width=45% />
 </div>
 
 **New Features:**
