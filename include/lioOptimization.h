@@ -378,6 +378,8 @@ public:
     void threadPubColorPoints();
     // publish result by ROS for visualization
 
+    void saveColorPoints();
+
     tf::TransformBroadcaster tfBroadcaster;
     tf::StampedTransform laserOdometryTrans;
 };
