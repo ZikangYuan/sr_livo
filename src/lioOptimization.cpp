@@ -1383,6 +1383,48 @@ void lioOptimization::publish_odometry(const ros::Publisher & pubOdomAftMapped, 
     tfBroadcaster.sendTransform(laserOdometryTrans);
 }
 
+void lioOptimization::saveColorPoints()
+{
+    std::string pcd_path = std::string(output_path + "/rgb_map.pcd");
+    std::cout << "Save colored points to " << pcd_path << std::endl;
+
+    pcl::PointCloud<pcl::PointXYZRGB> pcd_rgb;
+
+    long point_size = img_pro->map_tracker->rgb_points_vec.size();
+    pcd_rgb.resize(point_size);
+
+    long point_count = 0;
+
+    for (long i = point_size - 1; i > 0; i--)
+    {
+        img_pro->map_tracker->mutex_rgb_points_vec->lock();
+        int N_rgb = img_pro->map_tracker->rgb_points_vec[i]->N_rgb;
+        img_pro->map_tracker->mutex_rgb_points_vec->unlock();
+
+        if (N_rgb < map_options.pub_point_minimum_views)
+        {
+            continue;
+        }
+
+        pcl::PointXYZRGB point;
+        img_pro->map_tracker->mutex_rgb_points_vec->lock();
+        pcd_rgb.points[point_count].x = img_pro->map_tracker->rgb_points_vec[i]->getPosition()[0];
+        pcd_rgb.points[point_count].y = img_pro->map_tracker->rgb_points_vec[i]->getPosition()[1];
+        pcd_rgb.points[point_count].z = img_pro->map_tracker->rgb_points_vec[i]->getPosition()[2];
+        pcd_rgb.points[point_count].r = img_pro->map_tracker->rgb_points_vec[i]->getRgb()[2];
+        pcd_rgb.points[point_count].g = img_pro->map_tracker->rgb_points_vec[i]->getRgb()[1];
+        pcd_rgb.points[point_count].b = img_pro->map_tracker->rgb_points_vec[i]->getRgb()[0];
+        img_pro->map_tracker->mutex_rgb_points_vec->unlock();
+        point_count++;
+    }
+
+    pcd_rgb.resize(point_count);
+
+    std::cout << "Total have " << point_count << " points." << std::endl;
+    std::cout << "Now write to: " << pcd_path << std::endl; 
+    pcl::io::savePCDFileBinary(pcd_path, pcd_rgb);
+}
+
 void lioOptimization::run()
 {
     std::vector<Measurements> measurements = getMeasurements();
@@ -1560,6 +1602,8 @@ int main(int argc, char** argv)
 
         rate.sleep();
     }
+
+    LIO.saveColorPoints();
 
     visualization_map.join();
 
