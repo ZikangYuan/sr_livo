@@ -4,7 +4,7 @@
 
 ## Related Work
 
-[SR-LIVO: LiDAR-Inertial-Visual Odometry and Mapping with Sweep Reconstruction](https://arxiv.org/abs/2312.16800)
+[SR-LIVO: LiDAR-Inertial-Visual Odometry and Mapping with Sweep Reconstruction](https://xplorestaging.ieee.org/document/10501952)
 
 Authors: [*Zikang Yuan*](https://scholar.google.com/citations?hl=zh-CN&user=acxdM9gAAAAJ), *Jie Deng*, *Ruiye Ming*, [*Fengtian Lang*](https://scholar.google.com/citations?hl=zh-CN&user=zwgGSkEAAAAJ&view_op=list_works&gmla=ABEO0Yrl4-YPuowyntSYyCW760yxM5-IWkF8FGV4t9bs9qz1oWrqnlHmPdbt7LMcMDc04kl2puqRR4FaZvaCUONsX7MQhuAC6a--VS2pTsuwj-CyKgWp3iWDP2TS0I__Zui5da4) and [*Xin Yang*](https://scholar.google.com/citations?user=lsz8OOYAAAAJ&hl=zh-CN)
 
@@ -148,6 +148,15 @@ If you use our work in your research project, please consider citing:
   journal={arXiv preprint arXiv:2312.16800},
   year={2023}
 }
+
+@article{yuan2024sr,
+  author={Yuan, Zikang, Deng, Jie, Ming, Ruiye, Lang, Fengtian and Yang, Xin},
+  journal={IEEE Robotics and Automation Letters}, 
+  title={SR-LIVO: LiDAR-Inertial-Visual Odometry and Mapping With Sweep Reconstruction}, 
+  year={2024},
+  volume={9},
+  number={6},
+  pages={5110-5117}
 ```
 
 ## Acknowledgments
