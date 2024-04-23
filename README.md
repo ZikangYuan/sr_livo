@@ -142,13 +142,6 @@ rosbag play SEQUENCE_NAME.bag --clock -d 1.0
 If you use our work in your research project, please consider citing:
 
 ```
-@article{yuan2023sr,
-  title={SR-LIVO: LiDAR-Inertial-Visual Odometry and Mapping with Sweep Reconstruction},
-  author={Yuan, Zikang, Deng, Jie, Ming, Ruiye, Lang, Fengtian and Yang, Xin},
-  journal={arXiv preprint arXiv:2312.16800},
-  year={2023}
-}
-
 @article{yuan2024sr,
   author={Yuan, Zikang, Deng, Jie, Ming, Ruiye, Lang, Fengtian and Yang, Xin},
   journal={IEEE Robotics and Automation Letters}, 
