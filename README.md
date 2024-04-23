@@ -143,7 +143,7 @@ If you use our work in your research project, please consider citing:
 
 ```
 @article{yuan2024sr,
-  author={Yuan, Zikang, Deng, Jie, Ming, Ruiye, Lang, Fengtian and Yang, Xin},
+  author={Yuan, Zikang and Deng, Jie and Ming, Ruiye and Lang, Fengtian and Yang, Xin},
   journal={IEEE Robotics and Automation Letters}, 
   title={SR-LIVO: LiDAR-Inertial-Visual Odometry and Mapping With Sweep Reconstruction}, 
   year={2024},
