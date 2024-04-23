@@ -150,6 +150,7 @@ If you use our work in your research project, please consider citing:
   volume={9},
   number={6},
   pages={5110-5117}
+}
 ```
 
 ## Acknowledgments
