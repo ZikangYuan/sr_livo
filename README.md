@@ -1,4 +1,4 @@
-# SR_LIVO
+# SR-LIVO
 
 **SR-LIVO** (LiDAR-Inertial-Visual Odometry and Mapping System with Sweep Reconstruction) is designed based on the framework of [**R3Live**](https://github.com/hku-mars/r3live). We employ the **sweep reconstruction** method to align reconstructed sweeps with image timestamps. This allows the LIO module to accurately determine states at all imaging moments, enhancing pose accuracy and processing efficiency. In **SR-LIVO**, an ESIKF is utilized to solve state in LIO module, and utilize an ESIKF to optimize camera parameters in vision module respectively for optimal state estimation and colored point cloud map reconstruction.
 
